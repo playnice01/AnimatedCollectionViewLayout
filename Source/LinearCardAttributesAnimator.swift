@@ -31,8 +31,9 @@ public struct LinearCardAttributesAnimator: LayoutAttributesAnimator {
     public func animate(collectionView: UICollectionView, attributes: AnimatedCollectionViewLayoutAttributes) {
         let position = attributes.middleOffset
         let scaleFactor = scaleRate - 0.1 * abs(position)
-        let scaleTransform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
-        
+      //  let scaleTransform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
+      let scaleTransform = CGAffineTransform(scaleX: scaleFactor, y: 1)
+      
         let translationTransform: CGAffineTransform
         
         if attributes.scrollDirection == .horizontal {
